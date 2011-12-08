@@ -1,0 +1,28 @@
+body {font-family:verdana,arial;font-size:10pt;color:#000;background-color:#ddd;}
+a{text-decoration:none;color:#666 ;}
+.error{color:#ff0000;margin:5px;}
+.radius{-moz-border-radius:6px;border-radius:6px;}
+p.copyright{text-align:center;font-size:9px;color:#666;}
+div#wrapper{background-color:#fff;width:1000px;margin-left:auto;margin-right:auto;border:4px solid red;padding:0 20px 20px 20px;min-height:500px;}
+div#wrapper ul{margin:0 0 10px 0;padding:0;}
+div#wrapper ul li{margin:0;list-style:none;display:inline-block;}
+div#wrapper ul.navigation li{width:49%;}
+div#wrapper ul.navigation li.right{text-align:right;}
+div#wrapper ul.buttons li{width: 150px;border: 2px solid red;background-color:#ddd;text-align:center;cursor:pointer;}
+div#wrapper ul.buttons li.active{background-color:#444;}
+div#wrapper ul.buttons li a{display:block;padding: 5px;}
+div#wrapper ul.buttons li.small a{display:block;padding: 2px;font-size:10px;}
+div#wrapper ul.buttons li:hover{background-color:#eee;}
+div#wrapper div.error{color:#ff0000;}
+div#wrapper div.overview{margin:20px 0 0 20px;}
+div#wrapper div.page label{float:left;width:120px;}
+div#wrapper div.page input{width:200px;}
+div#wrapper div.page textarea{width:200px;height:100px;}
+div#wrapper div.page.form select{width:100px;}
+div#wrapper div.page.list table{width:800px;margin:20px 0 20px 0;color:blue;border-collapse:collapse;}
+div#wrapper div.page.list table td,
+div#wrapper div.page.list table th{border:1px solid #999;padding:3px;}
+div#wrapper div.page.list table thead th{text-align:left;}
+div#wrapper div.page.list table td a{display:inline-block;padding-left:4px;width:16px;color:#fff;}
+div#wrapper div.page.list table td a.edit{background-color:#00ff00;}
+div#wrapper div.page.list table td a.del{background-color:#ff0000;}

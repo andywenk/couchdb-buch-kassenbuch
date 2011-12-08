@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Kassenbuch</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+    <link rel="stylesheet" type="text/css" href="css/kassenbuch.css" />
+</head>
+<body>
+
+<div id="wrapper" class="radius">
+  <ul class="navigation">
+    <li><h1>Kassenbuch</h1></li>
+    <li class="right">
+      <ul class="buttons">
+        <li class="radius"><a href="list">Zur Liste</a></li>
+        <li class="radius"><a href="form">Zum Formular</a></li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="js_error error">&nbsp;</div>
+  
+  <div class="js_page default">
+    <p>Dies ist die Beispielapplikation "Kassenbuch". Sie wird in Kapitel 4 des Buchs "CouchDB" von Andreas Wenk und Till Klampäckel aus 
+      dem Galileocomputing Verlag besprochen.</p>
+    <p>Die Applikation ist komplett im _design Dokument "buchhaltung" in der CouchDB "kassenbuch" gespeichert und kann von dort ausgeführt 
+      werden. Diese Seite ist die Übersicht. Per Klick auf die obigen Buttons gelangen sie zum Formular um neue Buchungen aufzunehmen und zur
+      Liste mit allen Buchungen. 
+    <p>&nbsp;</p>
+    
+    <h2>Übersicht</h2>
+    <div class="js_overview overview">
+      <p><strong>Einnahmen gesamt:</strong>&nbsp;<span class="js_einnahme">0.00</span></p>
+      <p><strong>Ausgaben gesamt:</strong>&nbsp;<span class="js_ausgabe">0.00</span></p>
+    </div>
+  </div>
+  
+  <div class="js_page page list">
+    <h3>Vorhandene Buchungen</h3>
+    Gruppieren nach:&nbsp;
+    <select name="group_level" class="js_group_level">
+      <option value="">keine Gruppierung</option>
+      <option value="1">Einnahmen / Ausgaben</option>
+      <option value="2">MwSt.</option>
+      <option value="3">Jahr</option>
+      <option value="4">Jahr / Monat</option>
+      <option value="5">Jahr / Monat / Tag</option>
+    </select>
+    
+    <table class="js_list list_table">
+      <thead>
+      <tr>
+        <th>Typ</th>
+        <th>MwSt.</th>
+        <th>Jahr</th>
+        <th>Monat</th>
+        <th>Tag</th>
+        <th>ID</th>
+        <th>Beschreibung</th>
+        <th>Betrag</th>
+        <th>Aktion</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="9">... noch keine Buchungen vorhanden</td>
+        </tr>
+      </tbody>  
+    </table>  
+    
+    <p>
+      <ul class="buttons">
+        <li class="small radius"><a href="default">Zur Übersicht</a></li>
+      </ul>
+    </p>
+  </div>  
+
+  <div class="js_page page form">
+    <h3>Neue Buchung vornehmen</h3>
+    <form class="js_save" action="" method="post">
+      <label for="typ">Typ:</label>
+        <select name="typ">
+          <option value="Einnahme">Einnahme</option>
+          <option value="Ausgabe">Ausgabe</option>
+        </select><br />
+      <label for="mwst">MwSt.:</label>
+        <select name="mwst">
+          <option value="0.19">19%</option>
+          <option value="0.07">7%</option>
+        </select><br />
+      <label for="datum">Datum:</label><input type="text" name="datum" value=""><br />
+      <label for="betrag">Betrag:</label><input type="text" name="betrag" value=""><br />
+      <label for="beschreibung">Beschreibung:</label>
+        <textarea name="beschreibung"></textarea><br />
+      <label for="id">_id:</label><input type="text" name="_id" class="js_id" value=""><br />
+      <input type="hidden" name="_rev" class="js_rev"value=""> 
+       
+      <label for="submit">&nbsp;</label><input type="submit" name="submit" value="speichern" class="js_submit js_no_reset"><br />
+    </form>
+    
+    <p>&nbsp;</p>
+    <p>
+      <ul class="buttons">
+        <li class="small radius"><a href="default">Zur Übersicht</a></li>
+      </ul>
+    </p>
+  </div>
+</div>
+<p class="copyright">powered by <a href="http://couchdb.apache.org">CouchDB</a>&nbsp;|&nbsp;&copy;&nbsp;2011&nbsp;Andreas Wenk, Till Klamp&auml;ckel</p> 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/kassenbuch.js"></script>
+</body>
+</html>
